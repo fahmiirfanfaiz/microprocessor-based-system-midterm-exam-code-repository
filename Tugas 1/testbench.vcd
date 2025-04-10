@@ -1,0 +1,152 @@
+$date
+	Mon Apr 07 09:34:32 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module testbench $end
+$var wire 1 ! Zero $end
+$var wire 32 " WriteData [31:0] $end
+$var wire 1 # RegWrite $end
+$var wire 1 $ RegDst $end
+$var wire 32 % ReadData2 [31:0] $end
+$var wire 32 & ReadData1 [31:0] $end
+$var wire 1 ' MemtoReg $end
+$var wire 1 ( MemWrite $end
+$var wire 32 ) MemReadData [31:0] $end
+$var wire 1 * MemRead $end
+$var wire 1 + Branch $end
+$var wire 32 , ALU_B [31:0] $end
+$var wire 1 - ALUSrc $end
+$var wire 32 . ALUOut [31:0] $end
+$var wire 2 / ALUOp [1:0] $end
+$var reg 4 0 ALUCtrl [3:0] $end
+$var reg 32 1 Extend32 [31:0] $end
+$var reg 7 2 MemAddress [6:0] $end
+$var reg 6 3 Opcode [5:0] $end
+$var reg 5 4 ReadReg1 [4:0] $end
+$var reg 5 5 ReadReg2 [4:0] $end
+$var reg 5 6 WriteReg [4:0] $end
+$var reg 1 7 clock $end
+$scope module alu $end
+$var wire 4 8 ALUCtrl [3:0] $end
+$var wire 1 ! Zero $end
+$var wire 32 9 B [31:0] $end
+$var wire 32 : A [31:0] $end
+$var reg 32 ; ALUOut [31:0] $end
+$upscope $end
+$scope module data_mem $end
+$var wire 7 < address [6:0] $end
+$var wire 1 7 clock $end
+$var wire 32 = WriteData [31:0] $end
+$var wire 1 ( MemWrite $end
+$var wire 1 * MemRead $end
+$var reg 32 > ReadData [31:0] $end
+$upscope $end
+$scope module main_ctrl $end
+$var wire 6 ? Opcode [5:0] $end
+$var reg 2 @ ALUOp [1:0] $end
+$var reg 1 - ALUSrc $end
+$var reg 1 + Branch $end
+$var reg 1 * MemRead $end
+$var reg 1 ( MemWrite $end
+$var reg 1 ' MemtoReg $end
+$var reg 1 $ RegDst $end
+$var reg 1 # RegWrite $end
+$upscope $end
+$scope module mux2 $end
+$var wire 1 - ALUSrc $end
+$var wire 32 A Extend32 [31:0] $end
+$var wire 32 B ReadData2 [31:0] $end
+$var reg 32 C ALU_B [31:0] $end
+$upscope $end
+$scope module mux3 $end
+$var wire 32 D ALUOut [31:0] $end
+$var wire 1 ' MemtoReg $end
+$var wire 32 E ReadData [31:0] $end
+$var reg 32 F WriteData [31:0] $end
+$upscope $end
+$scope module reg_file $end
+$var wire 32 G ReadData1 [31:0] $end
+$var wire 32 H ReadData2 [31:0] $end
+$var wire 5 I ReadReg1 [4:0] $end
+$var wire 5 J ReadReg2 [4:0] $end
+$var wire 1 # RegWrite $end
+$var wire 32 K WriteData [31:0] $end
+$var wire 5 L WriteReg [4:0] $end
+$var wire 1 7 clock $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b11 L
+b101 K
+b10 J
+b1 I
+b1111 H
+b10100 G
+b101 F
+bx E
+b101 D
+b1111 C
+b1111 B
+b0 A
+b10 @
+b0 ?
+bx >
+b101 =
+b0 <
+b101 ;
+b10100 :
+b1111 9
+b110 8
+07
+b11 6
+b10 5
+b1 4
+b0 3
+b0 2
+b0 1
+b110 0
+b10 /
+b101 .
+0-
+b1111 ,
+0+
+0*
+bx )
+0(
+0'
+b10100 &
+b1111 %
+1$
+1#
+b101 "
+0!
+$end
+#5000
+17
+#10000
+b11111 "
+b11111 =
+b11111 F
+b11111 K
+b11111 .
+b11111 ;
+b11111 D
+07
+b1 0
+b1 8
+b100 6
+b100 L
+#15000
+17
+#20000
+07
